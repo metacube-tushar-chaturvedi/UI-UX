@@ -5,25 +5,24 @@
     <title>Metacube Parking System</title>
 </head>
 <body>
-
-    <nav>
+    <section id="cover-image">
+        <img src="src\cover-image.jpeg" alt="Parking System Cover Image">
+    </section>
+    <nav class = "navbar">
         <ul>
-            <li><a href="#employee-section">Add Employee</a></li>
-            <li><a href="#vehicle-section">Add Vehicle</a></li>
-            <li><a href="#feedback-section">Give Feedback</a></li>
-            <li><a href="#pricing-section">Pricing</a></li>
+            <li class="navitem1"><a href="#employee-section">Add Employee</a></li>
+            <li class ="navitem2"><a href="#vehicle-section">Add Vehicle</a></li>
+            <li class ="navitem3"><a href="#feedback-section">Give Feedback</a></li>
+            <li class ="navitem4"><a href="#pricing-section">Pricing</a></li>
         </ul>
     </nav>
-
-    <section id="cover-image">
-        <img src="cover-image.jpg" alt="Parking System Cover Image">
-    </section>
 
     <section id="employee-section">
         <h2>Add Employee</h2>
         <form>
             <label for="full-name">Full Name:</label>
             <input type="text" id="full-name" name="full-name" required>
+            <br>
 
             <label for="gender">Gender:</label>
             <select id="gender" name="gender" required>
@@ -31,18 +30,20 @@
                 <option value="female">Female</option>
                 <option value="other">Other</option>
             </select>
-
+            <br>
+            
+            
             <label for="email">Email ID:</label>
             <input type="email" id="email" name="email" required>
+            <br>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
-
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
+            <br>
 
             <label for="contact-number">Contact Number:</label>
             <input type="tel" id="contact-number" name="contact-number" pattern="[0-9]{10}" required>
+            <br>
 
             <button type="submit">Add Employee</button>
         </form>
@@ -54,22 +55,28 @@
         <form>
             <label for="vehicle-make">Vehicle Make (Company):</label>
             <input type="text" id="vehicle-make" name="vehicle-make" required>
+            <br>
             
             <label for="vehicle-model">Vehicle Model:</label>
             <input type="text" id="vehicle-model" name="vehicle-model" required>
-
+             <br>
+             
             <label for="vehicle-type">Type:</label>
             <input type="text" id="vehicle-type" name="vehicle-type" required>
-
+             <br>
+             
             <label for="vehicle-number">Vehicle Number:</label>
             <input type="text" id="vehicle-number" name="vehicle-number" required>
-
+             <br>
+             
             <label for="employee-id">Employee ID:</label>
             <input type="text" id="employee-id" name="employee-id" required>
-
+             <br>
+             
             <label for="identification">Identification:</label>
             <textarea id="identification" name="identification" placeholder="Color, mark, visible accessory, etc." required></textarea>
-
+             <br>
+             
             <button type="submit">Add Vehicle</button>
         </form>
     </section>
@@ -83,18 +90,20 @@
                 <option value="complaint">Complaint</option>
                 <option value="general">General</option>
             </select>
+            <br>
 
             <label for="feedback-comments">Comments:</label>
             <textarea id="feedback-comments" name="feedback-comments" required></textarea>
+            <br>
 
             <label for="rating">Rating (1-5):</label>
             <input type="number" id="rating" name="rating" min="1" max="5" required>
+            <br>
 
             <button type="submit">Submit Feedback</button>
         </form>
     </section>
 
-    <!-- Pricing Section -->
     <section id="pricing-section">
         <h2>Pricing</h2>
 
