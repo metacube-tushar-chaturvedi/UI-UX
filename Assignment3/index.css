@@ -1,0 +1,447 @@
+*{
+    font-family: "Roboto";
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    max-width: 1180px;
+    width: 100%;
+    padding: 10px 120px;
+    }
+
+.header-sec{
+    background-image: url(src/homebg.png);
+    background-size: 100% 100%;
+    /* width: 100%; */
+    height: 950px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;    
+}
+a{
+    text-decoration: none;
+}
+
+.navitem{
+    padding: 0px 10px;
+    font-weight: bold;
+    color:aliceblue
+}
+.header-icon > i{
+    padding: 0px 5px;
+    color: #fff;
+}
+
+.header-body{
+    margin: 40px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-btn{
+    display: flex;
+    margin:20px 0px ;
+}
+
+.header-title{
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+
+.download-btn{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    height: 50px;
+    width: 150px;
+    background-color: #fc6a45;
+    color:#fff;
+    border-radius: 5px;
+    margin :10px 10px;
+}
+
+.feature-btn{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    height: 50px;
+    width: 150px;
+    background-color: #4563c5;
+    color:#fff;
+    border-radius: 5px;
+    margin :10px 0px;
+}
+
+.features> .feature-title{
+
+    margin-top: 80px;
+    margin-bottom: 15px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(70, 70, 185);
+
+}
+
+.feature-card{
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.features> .sub-header{
+    text-align: center;
+    color: grey;
+}
+
+.feature-carditem{
+    display:flex;
+}
+
+.feature-carditem > .feature-content{
+    margin: 0px 10px;
+    width: 180px;
+}
+
+.feature-content p{
+    margin-top: 10px;
+    color: grey;
+}
+
+.feature-image{
+    display: flex
+}
+
+.feature-image {
+    margin: 80px 0px;
+}
+
+
+ #drag1{
+    z-index: 1;
+    position: absolute;
+   
+}
+
+ #drag2{
+    z-index: 2;
+    position: relative;
+    bottom: 75px;
+    left: 149px;
+}
+
+#drag3{
+    height: 568px;
+ left: 30px;
+ bottom: -1px;
+}
+
+
+.sec-card{
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.screenshot > .screenshot-title{
+    margin-bottom: 15px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(70, 70, 185);
+
+}
+
+.screenshot> .screenshot-text{
+    margin-bottom: 120px;
+    text-align: center;
+    color: grey;
+}
+
+.content{
+    width: 350px;
+}
+
+.screenshot1{
+    display: flex;
+    justify-content: space-around;
+    margin:300px 0px;
+}
+
+.image {
+    display: flex;
+
+}
+.image > img{
+    position: relative;
+    z-index: 0;
+}
+.image> .text_behind_img{
+    margin-top: 173px;
+    transform: rotate(90deg);
+    word-spacing:30px;
+    position: absolute;
+    z-index: -1;
+    font-size: 200px;
+    color: rgb(183, 183, 198);
+}
+
+.image > .common-box1{
+    height: 87px;
+    width: 87px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+} 
+
+.image > .common-box2{
+    height: 87px;
+    width: 87px;
+    border-radius: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+} 
+
+.screen-1-box1{
+    margin-top: 178px;
+    left: 469px;
+    z-index: 1;
+    background-color:yellow ;
+    color: #fff;
+}
+
+.screen-1-box2{
+    background-color: blue;
+    color: #fff;
+    z-index: 1;
+    margin-top: 345px;
+    left: 148px;
+}
+
+
+
+.con-title{
+    margin: 30px 0px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.con-description{
+    color: rgb(204, 203, 203);
+    font-size: 25px;
+}
+
+.shapes{
+    margin: 40px 0px;
+    display:flex
+}
+
+.shapes > .circle1{
+    
+    z-index: 1;
+    height: 70px;
+    width: 70px;
+    position: relative;
+    border-radius:40px;
+    border-color: rgb(203, 201, 201);
+    color:rgb(203, 201, 201);
+    background-color: #fff;
+    border-style: dotted;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shapes > .circle2{
+    z-index: 0;
+    height: 70px;
+    width: 70px;
+    position: relative;
+    border-radius:40px;
+    border-color: rgb(203, 201, 201);
+    color:rgb(203, 201, 201);
+    background-color: #fff;
+    border-style: dotted;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -10px;
+}
+
+.shapes > .circle3{
+    z-index: -1;
+    height: 70px;
+    width: 70px;
+    position: relative;
+    border-radius:40px;
+    border-color: rgb(203, 201, 201);
+    color:rgb(203, 201, 201);
+    border-style: dotted;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -20px;
+}
+
+
+.image> .text_behind_SecondImg{
+    margin-top: 173px;
+    transform: rotate(90deg);
+    word-spacing:30px;
+    position: absolute;
+    left: 306px;
+    z-index: -1;
+    font-size: 200px;
+    color: rgb(183, 183, 198);
+}
+
+.image > .screen-3-box1{
+    margin-top: 178px;
+    left: 450px;
+    z-index: 1;
+    background-color:rgb(73, 230, 185) ;
+    color: #fff;
+}
+
+.image > .screen-3-box2{
+    background-color: #7691c6;
+    color: #fff;
+    z-index: 1;
+    margin-top: 345px;
+    left: 148px;
+}
+
+
+.image> .text_behind_thirdImg{
+    margin-top: 173px;
+    transform: rotate(90deg);
+    word-spacing:30px;
+    position: absolute;
+    margin-left: 70px;
+    z-index: -1;
+    font-size: 200px;
+    color: rgb(183, 183, 198);
+}
+
+.image > .screen-2-box1{
+    height: 87px;
+    width: 87px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: orange;
+    color: white;
+    margin-left: 232px;
+    margin-top: 148px;
+
+}
+
+.image > .screen-2-box2{
+    color:white;
+    height: 87px;
+    width: 87px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #fc6a45;
+    margin-top: 356px;
+    margin-left: -50px;
+}
+
+.review-title{
+     font-size: 25px;
+     color: #6488fb;
+     font-weight: bold;
+     text-align: center;
+}
+.review-sub-title{
+     color: #b8b8b9;
+     text-align: center;
+}
+
+.userReview{
+    width: 350px;
+    margin: 30px 15px;
+}
+.quote{
+    font-size: 25px;
+}
+
+.person{
+    margin-top: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.download-app-container{
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between
+}
+
+.download-app {
+   background-color: rgba(99,136,251,255);
+   height: 400px;
+}
+
+.content-title{
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    margin: 20px 0px;
+}
+
+.content-description{
+    margin: 20px 0px;
+    font-size: 15px;
+    font-weight:500;
+    color: #fff;
+    margin: 20px 0px;
+}
+
+.footer{
+    height: 180px;
+    background-color: rgba(56,58,83,255);
+}
+
+.downlaod-app-image> img{
+    max-width: 80%;
+    height: auto;
+}
+
+
+
+
+
+
+
