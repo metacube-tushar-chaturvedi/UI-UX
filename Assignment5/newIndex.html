@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Dashboard
+    </title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="assets/logo.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-auto col-lg-3 side-nav bg-color">
+                <div class="text-center my-4 d-none d-xl">
+                    <img class="text-center" src="assets/logo.png" alt="logo">
+                    
+                </div>
+                <div class="side-nav-box ">
+                    <ul class="list-unstyled">
+                        <li class="side-nav-title nav-item d-none d-xl-inline">
+                            <p>NAVIGATION</p>
+                        </li>
+
+                        
+                            <a class="nav-item" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                                aria-controls="collapseExample">
+                                <div class="nav-side-items">
+                                    <div class="align-items-baseline">
+                                        <i class="item-color fa fa-home my-2" style="font-size:24px"></i>
+                                        <p class="item-color ps-3 pe-4 mb-0 d-none d-xl-inline">Dashboards</p>
+                                  
+                                    </div>
+                                    <div class="num-btn mx-4 d-none d-xl-inline">
+                                        5
+                                    </div>
+
+                                   
+                                </div>
+                            </a>
+                    
+                        <div class="collapse" id="collapseExample">
+                            <div class="card mx-4 bg-color border-0">
+                                <a class="my-1 ps-3 d-none d-sm-inline" href="">Ecommerce</a>
+                                <a class="my-1 ps-3 d-none d-sm-inline" href="">Projects</a>
+                                <a class="my-1 ps-3 d-none d-sm-inline" href="">CRM</a>
+                                <a class="my-1 ps-3 d-none d-sm-inline" href="">E-Wallest</a>
+                            </div>
+                        </div>
+
+                        <li class="side-nav-title d-none d-xl-inline nav-item">
+                            <p>Apps</p>
+                        </li>
+                        <li><a href="">
+                            <div>
+                                <i class="bi bi-calendar item-color my-2"></i>
+                                <p class="item-color ps-3 d-none d-xl-inline">Calendar</p>
+                            </div>
+                         </a></li>
+
+                         <li>
+                            <a href="">
+                            <div class="d-inline-flex">
+                                <i class="bi bi-chat-left item-color my-2 mt-1"></i>
+                                <p class="item-color ps-3 d-none d-xl-inline">Chat</p>
+                            </div>
+                         </a></li>
+                         
+                        <li>
+                              
+                            <a data-bs-toggle="collapse" href="#crm" role="button" aria-expanded="false"
+                                aria-controls="crm">
+                                <div class="nav-side-items">
+                                    <div class="d-inline-flex align-items-baseline">
+                                        <i class="bi bi-speedometer2 item-color my-2"></i>
+                                        <p class="item-color ps-3 pe-4 mb-0 d-none d-xl-inline">CRM</p>
+                                      
+                                    </div>
+                                    <div class="box-btn mx-4 d-none d-xl-inline">
+                                        new
+                                    </div>
+                                </div>
+                            </a>
+                    
+                        <div class="collapse" id="crm">
+                            <div class="card mx-4 bg-color border-0">
+                                <a class="my-1 ps-3 d-none d-xl-inline" href="">Project</a>
+                                <a class="my-1 ps-3 d-none d-xl-inline" href="">OrderList</a>
+                                <a class="my-1 ps-3 d-none d-xl-inline" href="">Clients</a>
+                                <a class="my-1 ps-3 d-none d-xl-inline" href="">Managment</a>
+                            </div>
+                        </div>
+                        </li>
+
+                        <li>
+                            
+                            <a data-bs-toggle="collapse" href="#Ecommerce" role="button" aria-expanded="false"
+                            aria-controls="Ecommerce">
+                            <div class="nav-side-items">
+                                <div class="d-inline-flex align-items-baseline">
+                                    <i class="bi bi-shop item-color my-2"></i>
+                                    <p class="item-color ps-3 pe-4 mb-0 d-none d-xl-inline d-none d-xl-inline">Ecommerce</p>
+                                  
+                                </div>
+                               
+                            </div>
+                        </a>
+                        
+                
+                    <div class="collapse" id="Ecommerce">
+                        <div class="card mx-4 bg-color border-0">
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Project</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">OrderList</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Clients</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Managment</a>
+                        </div>
+                    </div>
+                        </li>
+
+                        <li>
+                            
+                            <a data-bs-toggle="collapse" href="#Email" role="button" aria-expanded="false"
+                            aria-controls="Email">
+                            <div class="nav-side-items">
+                                <div class="d-inline-flex align-items-baseline">
+                                    <i class="bi bi-envelope item-color my-2"></i>
+                                    <p class="item-color ps-3 pe-4 mb-0 d-none d-xl-inline d-none d-xl-inline">Email</p>
+                                  
+                                </div>
+                               
+                            </div>
+                        </a>
+                        
+                
+                    <div class="collapse" id="Email">
+                        <div class="card mx-4 bg-color border-0">
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Project</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">OrderList</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Clients</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Managment</a>
+                        </div>
+                    </div>
+                        </li>
+
+                       
+                        <li><a href="">
+                            <div class="d-inline-flex">
+                                <i class="bi bi-rss item-color my-2"></i>
+                                <p class="ps-3 item-color d-none d-xl-inline">Social Feed</p>
+                            </div>
+                         </a></li> 
+
+                        <li class="side-nav-title d-none d-xl-inline">
+                            <p>Custom</p>
+                        </li>
+
+                        <li>
+                              
+                            <a data-bs-toggle="collapse" href="#Pages" role="button" aria-expanded="false"
+                                aria-controls="Pages">
+                                <div class="nav-side-items">
+                                    <div class="d-inline-flex align-items-baseline">
+                                        <i class="bi bi-file-earmark item-color my-2"></i>
+                                        <p class="item-color ps-3 pe-4 mb-0 d-none d-xl-inline">Pages</p>
+                                      
+                                    </div>
+                                    <div class="num-btn mx-4 d-none d-xl-inline ">
+                                        5
+                                    </div>
+
+                                   
+                                </div>
+                            </a>
+                    
+                        <div class="collapse" id="Pages">
+                            <div class="card mx-4 bg-color border-0">
+                                <a class="my-1 ps-3 d-none d-xl-inline" href="">Project</a>
+                                <a class="my-1 ps-3 d-none d-xl-inline" href="">OrderList</a>
+                                <a class="my-1 ps-3 d-none d-xl-inline" href="">Clients</a>
+                                <a class="my-1 ps-3 d-none d-xl-inline" href="">Managment</a>
+                            </div>
+                        </div>
+                        </li>
+
+                        <li>
+                        
+                            <a data-bs-toggle="collapse" href="#LandingPage" role="button" aria-expanded="false"
+                            aria-controls="LandingPage">
+                            <div class="nav-side-items">
+                                <div class="d-inline-flex align-items-baseline">
+                                    <i class="bi bi-globe item-color my-2"></i>
+                                    <p class="item-color ps-3 pe-4 mb-0 d-none d-xl-inline ">Landing Page</p>
+                                  
+                                </div>
+                               
+                            </div>
+                        </a>
+                        
+                
+                    <div class="collapse" id="LandingPage">
+                        <div class="card mx-4 bg-color border-0">
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Project</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">OrderList</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Clients</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Managment</a>
+                        </div>
+                    </div>
+                        </li>
+
+                        <li>
+                            
+                            <a data-bs-toggle="collapse" href="#Layout" role="button" aria-expanded="false"
+                            aria-controls="Layout">
+                            <div class="nav-side-items">
+                                <div class="d-inline-flex align-items-baseline">
+                                    <i class="bi bi-window item-color my-2"></i>
+                                    <p class="item-color ps-3 pe-4 mb-0 d-none d-xl-inline">Layout</p>
+                                  
+                                </div>
+                               
+                            </div>
+                        </a>
+
+                
+                    <div class="collapse" id="Layout">
+                        <div class="card mx-4 bg-color border-0">
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Project</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">OrderList</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Clients</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Managment</a>
+                        </div>
+                    </div>
+                        </li>
+                        <li class="side-nav-title d-none d-xl-inline ">
+                            <p>Component</p>
+                        </li>
+
+                        <li>
+                              
+                            <a data-bs-toggle="collapse" href="#baseui" role="button" aria-expanded="false"
+                                aria-controls="baseui">
+                                <div class="nav-side-items">
+                                    <div class="d-inline-flex align-items-baseline">
+                                        <i class="bi bi-box-seam item-color my-2"></i>
+                                        <p class="item-color ps-3 pe-4 mb-0 d-none d-xl-inline">Base UI</p>
+                                      
+                                    </div>
+                            
+
+                                   
+                                </div>
+                            </a>
+                    
+                        <div class="collapse" id="baseui">
+                            <div class="card mx-4 bg-color border-0">
+                                <a class="my-1 ps-3 d-none d-xl-inline" href="">Project</a>
+                                <a class="my-1 ps-3 d-none d-xl-inline" href="">OrderList</a>
+                                <a class="my-1 ps-3 d-none d-xl-inline" href="">Clients</a>
+                                <a class="my-1 ps-3 d-none d-xl-inline" href="">Managment</a>
+                            </div>
+                        </div>
+                        </li>
+
+                        <li>
+                            
+                            <a data-bs-toggle="collapse" href="#expendedui" role="button" aria-expanded="false"
+                            aria-controls="expendedui">
+                            <div class="nav-side-items">
+                                <div class="d-inline-flex align-items-baseline">
+                                    <i class="bi bi-file-earmark-break item-color my-2"></i>
+                                    <p class="item-color ps-3 pe-4 mb-0 d-none d-xl-inline">Expended UI</p>
+                                  
+                                </div>
+                               
+                            </div>
+                        </a>
+                        
+                
+                    <div class="collapse" id="expendedui">
+                        <div class="card mx-4 bg-color border-0">
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Project</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">OrderList</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Clients</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Managment</a>
+                        </div>
+                    </div>
+                        </li>
+
+                        <li>
+                            
+                            <a data-bs-toggle="collapse" href="#widget" role="button" aria-expanded="false"
+                            aria-controls="widget">
+                            <div class="nav-side-items">
+                                <div class="d-inline-flex align-items-baseline">
+                                    <i class="item-color bi bi-layers my-2"></i>
+                                    <p class="item-color ps-3 pe-4 mb-0 d-none d-xl-inline ">Widget</p>
+                                  
+                                </div>
+                               
+                            </div>
+                        </a>
+                        
+                
+                    <div class="collapse" id="widget">
+                        <div class="card mx-4 bg-color border-0">
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Project</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">OrderList</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Clients</a>
+                            <a class="my-1 ps-3 d-none d-xl-inline" href="">Managment</a>
+                        </div>
+                    </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+            <div class="col-8">
+                <main></main>
+            </div>
+        </div>
+    </div>
+
+</body>
+<footer></footer>
+<html>
