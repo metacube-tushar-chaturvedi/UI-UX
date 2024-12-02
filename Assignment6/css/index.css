@@ -1,0 +1,80 @@
+body{
+    font-family: 'Cursive';
+    padding: 22px 42px;
+}
+
+a{
+    text-decoration: none;  
+  }
+
+  .navbar{
+    height: 700px;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-image: url(src/cover-image.jpg);
+    background-repeat:no-repeat;
+    background-size:cover ;
+    display: flex;
+    justify-content: end;
+
+    align-items: start;
+  }
+
+  #employee-heading{
+    padding: 22px 42px;
+    background-color: rgb(113, 43, 245);
+    border-radius: 20px 20px;
+    color: white;
+}
+
+  .navitem {
+    color: #fff;
+    font-size: 20px;
+}
+
+.navbar>div{
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+}
+
+details summary {
+  padding: 4px; 
+  cursor: pointer;
+  list-style: none;
+}
+
+
+.form-header{
+    padding: 22px 42px;
+    background-color: rgb(113, 43, 245);
+    border-radius: 20px 20px;
+    color: white;
+}
+
+.employee-form{
+    border: solid 2px;
+    border-radius: 14px;
+}
+
+label{
+    margin: 10px;
+}
+
+.form-field{
+    display: flex;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.btn{
+    border: 0;
+    color: white;
+    height: 38px;
+    width: 120px;
+    background: rgb(113, 43, 245);
+    border-radius: 25px;
+    margin: 20px;
+}
