@@ -1,3 +1,6 @@
+
+ let isError = false;
+
 let empolyeeDetails = {
   employeeId: 0,
   employeeName: "",
@@ -11,27 +14,43 @@ let vehicleDetails = {
   vehcileName: "",
   vehcileType: "",
   vehcileNumber: "",
-  employeeId: 0,
   identication: "",
+  totalAmountInUsd : 0
 };
 
-let getPrice = {
+const getPrice ={
+ INR : {
   cycle: {
-    daily: 5,
-    month: 100,
-    year: 500,
+    daily: 5,month: 100, year: 500,
   },
-  bike: {
-    daily: 20,
-    month: 200,
-    year: 1000,
+  bike: {daily: 20, month: 200, year: 1000,
   },
-  car: {
-    daily: 20,
-    month: 500,
-    year: 3500,
+  car: { daily: 20,  month: 500, year: 3500,
   },
+},
+
+YEN : { cycle: { daily: 30, month: 234, year: 500,
+  },
+bike: { daily: 50,month: 400, year: 1000,
+  },
+  car: {  daily: 100,  month: 600,  year: 1500,
+  },
+},
+
+USD: { cycle: { daily: 0.059, month: 1.18, year: 5.90,
+},
+bike: { daily: 0.24,month: 2.36, year: 11.80,
+},
+car: {  daily: 0.24,  month: 5.90,  year: 41.30,
+},
+}
 };
+
+var vehicleCard = document.getElementById("price-card-con");
+vehicleCard.style.display="none";
+
+let user  = document.getElementById("user");
+user.style.display="none";
 
 let title = document.getElementById("form-header-title");
 title.innerHTML = "Add Employee";
@@ -50,11 +69,32 @@ form.appendChild(nameField);
 
 nameField.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
-    empolyeeDetails.employeeName = document.getElementById("fullname").value;
+    let result= validateName(document.getElementById("fullname").value);
+    if(result){
+      if(isError){
+        const element = document.getElementById("error-element");
+element.remove();
+isError=false;
+
+      }
+      empolyeeDetails.employeeName = document.getElementById("fullname").value;
     radioinput(empolyeeDetails.employeeName);
+
+    }
+    else{
+      let msg = "Length should be min 2 character and no numeric";
+      createerrorElement(msg);
+      isError = true;
+
+    }
+   
   }
 });
 
+function validateName(name) {
+  const regex = /^[a-zA-Z]{2,}$/;
+  return regex.test(name);
+}
 function radioinput(name) {
   console.log("called radioinput");
   var form = document.getElementById("form-id");
@@ -103,10 +143,27 @@ function emailInput(name) {
 
   emailbtn.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
+    let result = validateEmail(emailbtn.value);
+    if(result){
+      if(isError){
+        deleteErrorElement();
+      }
       empolyeeDetails.employeeEmail = emailbtn.value;
       passwordInput(name);
     }
+    else {
+      let msg = "Mail is not in proper formate";
+      createerrorElement(msg);
+      isError = true;
+    }
+    
+    }
   });
+}
+
+function validateEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
 }
 
 function passwordInput(name) {
@@ -125,11 +182,29 @@ function passwordInput(name) {
 
   passwordfield.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
-      empolyeeDetails.employeePassword = passwordfield.value;
-      contactInput(name);
+      let result = validatePassword(passwordfield.value);
+      if(result){
+        if(isError){
+          deleteErrorElement();
+        }
+        empolyeeDetails.employeePassword = passwordfield.value;
+        contactInput(name);
+      }
+      else {
+        let msg = "password not in proper formate(uppercase, lowercase, number, min length 8 )";
+        createerrorElement(msg);
+        isError = true;
+      } 
+
     }
   });
 }
+
+function validatePassword(password) {
+  const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6,}$/;
+  return regex.test(password);
+}
+
 
 function contactInput(name) {
   console.log("called contact");
@@ -147,11 +222,32 @@ function contactInput(name) {
 
   contactfield.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
+    let result=   validateContactNumber(contactfield.value);
+    if(result){
+      if(isError)
+
+      {
+        deleteErrorElement();
+      }
       empolyeeDetails.employeeContact = contactfield.value;
       registration();
+    }else{
+      let msg = "contact number not in proper formate";
+      createerrorElement(msg);
+      isError = true;
+    }
+     
     }
   });
 }
+
+function validateContactNumber(contactNumber) {
+  if (contactNumber.length > 7 && /^\d+$/.test(contactNumber)) {
+      return true;
+  }
+  return false;
+}
+
 
 function registration() {
   let form = document.getElementById("form-id");
@@ -222,7 +318,7 @@ function vehcileType() {
   form.appendChild(selectElement);
 
   selectElement.addEventListener("change", function (e) {
-    vehicleDetails.vehcileType = document.getElementById("vechiletype").value;
+    vehicleDetails.vehcileType = selectElement.value;
     vehcileNumber();
   });
 }
@@ -242,8 +338,7 @@ function vehcileNumber() {
 
   nameField.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
-      vehicleDetails.identication =
-        document.getElementById("vechile-number").value;
+      vehicleDetails.identication = nameField.value;
       employeeId();
     }
   });
@@ -281,46 +376,120 @@ function identication() {
   nameField.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
       //   vehicleDetails.identication=document.getElementById('vehcile-identication').value;
-      getPass();
+      // getPass();
+      var vehicleCard = document.getElementById("price-card-con");
+      displayPricing()
     }
   });
 }
 
-function getPass() {
-  let parentElement = document.getElementById("passElement");
 
-  let name = document.createElement("p");
-  name.setAttribute("id", "pass-employee-name");
-  name.innerHTML = "Employee Name :" + empolyeeDetails.employeeName;
+function setPrice(pricing, vehicleType) {
+  const pricingSection = document.getElementById("card-title").innerHTML=vehicleType.toUpperCase();
 
-  let employeeId = document.createElement("p");
-  employeeId.setAttribute("id", "pass-employee-id");
-  employeeId.innerHTML = "Employee Id :" + empolyeeDetails.employeeId;
-
-  let daily = document.createElement("p");
-  daily.setAttribute("id", "daily-price");
-  let month = document.createElement("p");
-  month.setAttribute("id", "month-price");
-  let year = document.createElement("p");
-  year.setAttribute("id", "year-price");
-
-  if (vehcileType == "bike") {
-    daily.innerHTML = "Daily Price :" + getPass.bike.daily;
-    month.innerHTML = "Monthly price :" + getPass.bike.month;
-    year.innerHTML = "Yearly Price :" + getPass.bike.year;
-  } else if (vehcileType == "cycle") {
-    daily.innerHTML = "Daily Price :" + getPass.cycle.daily;
-    month.innerHTML = "Monthly price :" + getPass.cycle.month;
-    year.innerHTML = "Yearly Price :" + getPass.cycle.year;
-  } else if (vehcileType == "car") {
-    daily.innerHTML = "Daily Price :" + getPass.car.daily;
-    month.innerHTML = "Monthly price :" + getPass.car.month;
-    year.innerHTML = "Yearly Price :" + getPass.car.year;
-  }
-
-  parentElement.appendChild(name);
-  parentElement.appendChild(employeeId);
-  parentElement.appendChild(daily);
-  parentElement.appendChild(month);
-  parentElement.appendChild(year);
+  document.querySelector("#daily-price").innerHTML = pricing.daily + " Daily";
+  document.querySelector("#monthly-price").innerHTML = pricing.month + " Monthly";
+  document.querySelector("#yearly-price").innerHTML = pricing.year + " Yearly";
 }
+
+function displayPricing() {
+  // 
+  
+  const currencySelect = document.querySelector("#currency_type");
+  
+  let currencyType = currencySelect.value;
+  let vehicleType = vehicleDetails.vehcileType || "cycle";
+  
+
+  
+  let pricing = getPrice[currencyType][vehicleType];
+
+  console.log(pricing);
+  
+  
+  setPrice(pricing, vehicleType);
+  
+  vehicleCard.style.display="block";
+  
+  currencySelect.addEventListener("change", (event) => {
+      currencyType = currencySelect.value;
+
+      pricing = getPrice[currencyType][vehicleType];
+      
+      setPrice(pricing, vehicleType);
+  });
+
+
+
+
+}
+
+
+
+
+
+function createerrorElement( msg){
+  let errorElement =  document.createElement("p");
+  errorElement.setAttribute("id","error-element");
+  errorElement.innerHTML = msg;
+  let form = document.getElementById("form-id");
+
+ form.appendChild(errorElement);
+}
+
+function deleteErrorElement(){
+  const element = document.getElementById("error-element");
+  element.remove();
+  isError=false;
+}
+
+
+function displayDetails(){
+  const passSelect = document.getElementById("ticket-plan");
+  let pricing = getPrice["USD"][vehicleDetails.vehcileType]
+
+      switch (passSelect.value) {
+          case "daily":
+              vehicleDetails.totalAmountInUsd = pricing.daily;        
+              break;
+          case "monthly":
+            vehicleDetails.totalAmountInUsd = pricing.month;        
+              break;
+          case "yearly":
+            vehicleDetails.totalAmountInUsd = pricing.year;        
+              break;
+      }
+
+
+
+  let employee = document.getElementById("form-header-title");
+  employee.innerHTML="Employee Details";
+
+  let form = document.getElementById("form-id");
+  form.style.display="none";
+  let priceCard = document.getElementById("price-card-con");
+  priceCard.style.display="none";
+
+  let user  = document.getElementById("user");
+  user.style.display="block";
+
+
+  document.getElementById("employee-name").innerHTML ="Employee Name : "+ empolyeeDetails.employeeName;
+  document.getElementById("employee-id").innerHTML ="Employee Id : "+ empolyeeDetails.employeeId;
+  document.getElementById("employee-gender").innerHTML ="Employee Gender : " +empolyeeDetails.employeeGender;
+  document.getElementById("employee-email").innerHTML = "Employee Email : " +empolyeeDetails.employeeEmail;
+  document.getElementById("employee-contact").innerHTML = "Employee contact : " + empolyeeDetails.employeeContact;
+  document.getElementById("employee-contact").innerHTML = "Employee contact : " + empolyeeDetails.employeeContact;
+  document.getElementById("vehcile-name").innerHTML = "vehcile Name : " + vehicleDetails.vehcileName;
+  document.getElementById("vehcile-type").innerHTML = "vehcile type : " + vehicleDetails.vehcileType;
+  // document.getElementById("vehcile-number").innerHTML = "vehcile number : " + vehicleDetails.vehcileNumber;
+  document.getElementById("vehcile-identification").innerHTML = "vehcile identification : " + vehicleDetails.identication;
+  document.getElementById("total-amt").innerHTML = "Total Amount : " +vehicleDetails.totalAmountInUsd + " USD"; 
+
+}
+
+
+
+
+
+

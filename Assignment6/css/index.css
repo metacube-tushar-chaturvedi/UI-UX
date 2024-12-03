@@ -56,6 +56,7 @@ details summary {
 .employee-form{
     border: solid 2px;
     border-radius: 14px;
+    
 }
 
 label{
@@ -78,3 +79,51 @@ label{
     border-radius: 25px;
     margin: 20px;
 }
+
+#vehicle-cards{
+
+    display: flex;
+    justify-content: center;
+}
+
+.price-card{
+    height: 270px;
+    width: 240px;
+    border:  solid rgb(5, 33, 175) 2px;
+    border-radius: 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.price-card>p{
+    margin: 0px 0px;
+}
+
+.price{
+    height: 100px;
+    width: 100px;
+    border:  solid rgb(5, 33, 175) 2px;
+    border-radius: 43px;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.price-btn{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 160px;
+    font-size: 16px;
+    border-radius:5px ;
+    border: solid rgb(5, 33, 175) 2px;
+    margin: 16px auto;
+}
+
