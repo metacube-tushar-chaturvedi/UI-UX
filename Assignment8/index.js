@@ -1,9 +1,14 @@
-let express = require('express')
+const express = require('express')
 
-let app = express();
+const app = express();
 
-let port = process.env.PORT || 8080;
+const port = 3000;
 
 app.listen(port, ()=> {
-    console.log("Running server on ",port);
-})
+    console.log("Running server on ", port);
+});
+
+app.get('/hello', (req, res) => {
+    res.send("Hello World");
+});
+
