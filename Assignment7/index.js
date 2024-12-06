@@ -46,7 +46,7 @@ car: {  daily: 0.24,  month: 5.90,  year: 41.30,
 }
 };
 
-var vehicleCard = document.getElementById("price-card-con");
+let vehicleCard = document.getElementById("price-card-con");
 vehicleCard.style.display="none";
 
 let user  = document.getElementById("user");
@@ -75,8 +75,8 @@ nameField.addEventListener("keypress", (event)=> {
         const element = document.getElementById("error-element");
 element.remove();
 isError=false;
-
       }
+      
       empolyeeDetails.employeeName = document.getElementById("fullname").value;
     radioinput(empolyeeDetails.employeeName);
 
@@ -97,7 +97,7 @@ function validateName(name) {
 }
 function radioinput(name) {
   console.log("called radioinput");
-  var form = document.getElementById("form-id");
+  let form = document.getElementById("form-id");
 
   let labeltext = document.createElement("p");
   labeltext.innerText = "Hi " + name + "! Can i know your gender";
@@ -168,7 +168,7 @@ function validateEmail(email) {
 
 function passwordInput(name) {
   console.log("called radioinput");
-  var form = document.getElementById("form-id");
+  let form = document.getElementById("form-id");
 
   let label = document.createElement("p");
   label.innerText = "Hi " + name + "! Can i know your password";
@@ -208,7 +208,7 @@ function validatePassword(password) {
 
 function contactInput(name) {
   console.log("called contact");
-  var form = document.getElementById("form-id");
+  let form = document.getElementById("form-id");
 
   let label = document.createElement("p");
   label.innerText = "Hi " + name + "! Can i know your contact number";
@@ -377,7 +377,7 @@ function identication() {
     if (event.key === "Enter") {
       //   vehicleDetails.identication=document.getElementById('vehcile-identication').value;
       // getPass();
-      var vehicleCard = document.getElementById("price-card-con");
+      let vehicleCard = document.getElementById("price-card-con");
       displayPricing()
     }
   });

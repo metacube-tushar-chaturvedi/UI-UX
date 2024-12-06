@@ -1,0 +1,182 @@
+body{
+    font-family: 'Cursive';
+    padding: 22px 42px;
+}
+
+
+
+a{
+  text-decoration: none;  
+}
+
+#employee-heading{
+    padding: 22px 42px;
+    background-color: rgb(113, 43, 245);
+    border-radius: 20px 20px;
+    color: white;
+}
+
+.vehicle-form{
+    border-radius: 20px 20px;
+    border:solid black 2px;
+}
+
+.navbar{
+    height: 700px;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-image: url(src/cover-image.jpg);
+    background-repeat:no-repeat;
+    background-size:cover ;
+    display: flex;
+    justify-content: end;
+
+    align-items: start;
+    margin: 20px;
+}
+
+.navitem{
+    color: #fff;
+    font-size: 20px;
+
+}
+
+.navbar>div{
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+}
+
+details summary {
+  padding: 4px; 
+  cursor: pointer;
+  list-style: none;
+}
+
+
+.form-header{
+    padding: 22px 42px;
+    background-color: rgb(113, 43, 245);
+    border-radius: 20px 20px;
+    color: white;
+}
+
+.employee-form{
+    border: solid 2px;
+    border-radius: 14px;
+}
+
+label{
+    margin: 10px;
+}
+
+/* .input{
+    margin: 10px;
+    border-radius: 14px;
+} */
+
+.form-field{
+    display: flex;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.btn{
+    border: 0;
+    color: white;
+    height: 38px;
+    width: 120px;
+    background: rgb(113, 43, 245);
+    border-radius: 25px;
+    margin: 20px;
+}
+
+.feedback-content{
+    border-radius: 14px;
+    display: flex;
+   justify-content: space-around; 
+}
+.fdb-img{
+    width: 430px;
+    height: 347px;
+    border-radius: 35px;
+}
+
+.fdb-label{
+    margin-bottom: 10px;
+}
+
+.fdb-input .input{
+    height: 40px;
+    width: 200px;
+    margin-bottom: 20px;
+    border-radius:20px ;
+}
+
+
+
+.feedback-btn{
+    border: 0;
+    color: white;
+    height: 38px;
+    width: 120px;
+    background:rgb(92, 216, 92);
+    border-radius: 25px;
+    margin: 20px;
+}
+
+.pricing-header{
+    text-align: center;
+    margin: 35px;
+    padding: 35px;
+}
+
+
+#vehicle-cards{
+    display: flex;
+    justify-content: space-around;
+}
+
+.price-card{
+    height: 270px;
+    width: 240px;
+    border:  solid rgb(5, 33, 175) 2px;
+    border-radius: 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.price-card>p{
+    margin: 0px 0px;
+}
+
+.price{
+    height: 80px;
+    width: 80px;
+    border:  solid rgb(5, 33, 175) 2px;
+    border-radius: 43px;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.price-btn{
+    
+    text-align: center;
+    height: 20px;
+    width: 160px;
+    font-size: 16px;
+    border-radius:5px ;
+    border: solid rgb(5, 33, 175) 2px;
+    margin: 16px auto;
+}
+
+
+

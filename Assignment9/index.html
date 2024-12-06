@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <title>Metacube Parking System</title>
+    </head>
+    <body>
+        <section id="employee-section">
+                <h2 id="form-header-title" class="form-header">Add Employee</h2>
+                <h3 id="created-id"  style ="text-align: center;"></h3>
+
+
+                <form id="emp-form-id" class="employee-form py-4 px-4" >
+                
+                    <p for="name-text">Enter Name</p>
+                    <input class="input" type="text" id="employee-name" name="employee-name" required>
+    
+                    <p id="gender-text" class="d-none">Gender:<p>
+                    <select class="input d-none" id="gender" name="gender" class="d-none" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <p is="email-text" class="d-none">Email ID:</p>
+                    <input class="input d-none" type="email" id="employee-email" name="email" required>
+                    
+                    <p id="password-text" class="d-none">Password:</label>
+                    <input class="input d-none" type="password" id="password" name="password" required>
+ 
+                    <p id="contact-text " class="d-none">Contact Number:</p>
+                    <input class="input d-none" type="tel" id="contact-number" name="contact-number" pattern="[0-9]{10}"
+                        required>
+                
+                    <p id="error-Element"></p>
+
+                 <div class="btn btn-info" style="width: 40px;"><i class="bi bi-arrow-left"></i></div>
+                 <div id="nextBtn1" class="btn btn-info" style="width: 40px;"></div>
+                 <!-- <i class="bi bi-arrow-right"></i> -->
+
+                </form>
+
+            
+            
+
+            <form id="vehcile-form-id" class="employee-form py-4 px-4 d-none" >
+                
+                
+                <p for="vehicle-make" class="d-none">Vehicle Make (Company):</p>
+                <input class="input d-none" type="text" id="vehicle-make" name="vehicle-make" required>
+
+                </form>
+
+    <div id = "price-card-con" class="text-center my-3">
+        
+
+<select name="Currency" id="currency_type" class ="my-3">
+  <option value="INR">INR</option>
+  <option value="USD">USD</option>
+  <option value="YEN">YEN</option>
+</select>
+
+    <div id="vehicle-cards">
+
+                <div class="price-card">
+                    <h3 id="card-title"></h3>
+                    <p id = "price">Hello</p>
+                    <p id="daily-price"></p>
+                <p id="monthly-price"></p>
+                <p id="yearly-price"></p>
+                <select name="Currency" id="ticket-plan" class ="my-3">
+                    <option value="daily">daily</option>
+                    <option value="month">month</option>
+                    <option value="year">year</option>
+                  </select>
+                <div class="price-btn" onclick="displayDetails()">
+                    PURCHASE NOW
+                </div>
+                </div>
+    </div>   
+  
+    </div>
+    
+        <div id="user"  my-5 px-5 py-5>
+            <p id="employee-name"></p>
+            <p id="employee-id"></p>
+            <p id="employee-gender"></p>
+            <p id="employee-email"></p>
+            <p id="employee-contact"></p>
+            <p id="vehcile-name"></p>
+            <p id="vehcile-type"></p>
+            <p id="vehcile-number"></p>
+            <p id="vehcile-identification"></p>
+            <p id="total-amt" class="text-center fs-5"></p>
+        </div>    
+
+        </section>
+        <footer></footer>
+        <script>
+            document.getElementById("emp-form-id").addEventListener("submit", (e)=>{
+                e.preventDefault()
+            })
+
+
+        </script>
+        <script type="module" src="dist/main.js"> </script>
+        <!-- <script type="module" src="dist/vehcile.js"> </script> -->
+    
+</body>
+</html>
